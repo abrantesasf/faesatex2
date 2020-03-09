@@ -7,6 +7,11 @@ FAESA Centro Universitário.
 O status atual da classe faesaTeX2 é: **EM DESENVOLVIMENTO**. Isso significa que
 não está pronta para distribuição e uso por usuários finais.
 
+ATENÇÃO: este **não é** um projeto oficial da [FAESA Centro Universitário](https://www.faesa.br/),
+nem é endossado por essa instituição. É um projeto pessoal visando a formatação
+de meu próprio trabalho de conclusão de curso (TCC) de graduação em Ciência
+da Computação.
+
 Caso queira
 participar deste projeto de desenvolvimento, por favor envie um e-mail para
 [abrantesasf@gmail.com](mailto:abrantesasf@gmail.com) solicitando mais
