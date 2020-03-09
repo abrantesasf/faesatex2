@@ -1,4 +1,4 @@
-# faesaTeX2
+![faesaTeX2](logo/faesaTeX2_300_png)
 
 Classe LaTeX, customizada a partir do projeto [abnTeX2](http://www.abntex.net.br/),
 para documentos e estilo bibliográfico compatível com as normas da ABNT e da
