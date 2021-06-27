@@ -1,0 +1,50 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% pdfconfig.tex
+%
+% Arquivo de configuração do PDF final gerado pela classe faesaTeX2, para a
+% formatação de trabalhos acadêmicos na FAESA Centro Universitário
+% (https://www.faesa.br).
+%
+% Para maiores informações, visite:
+%    https://github.com/abrantesasf/faesatex2
+%
+% NÃO ALTERE NADA AQUI!
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Configurações básicas do PDF
+\makeatletter
+\hypersetup{
+   unicode=true,
+   pdflang={pt-BR},
+   bookmarksopen=false,
+   bookmarksnumbered=true,
+   bookmarksopenlevel=5,
+   pdfdisplaydoctitle=true,
+   pdfpagemode=UseOutlines,
+   pdfstartview=FitH,
+   pdfnewwindow=true,
+   %pagebackref=true,
+   %pdfcreator={TeX Live 2021: XeTeX (0.999993) + LaTeX2e (2021-06-01) + eTeX (2.6) + TeX (3.141592653)},
+   %pdfproducer={xdvipdfmx (20210318)},
+   pdftitle={\@title}, 
+   pdfauthor={\@author},
+   pdfsubject={\imprimirpreambulo},
+   pdfkeywords={\imprimirpalavraschave, \imprimirkeywords}, 
+   bookmarksdepth=5,
+   citecolor=blue,      % cor dos links para as referências bibliográficas
+   linkcolor=red,       % cor dos links internos (sumário, figuras, rodapé)
+   filecolor=cyan,      % dor dos links para arquivos
+   urlcolor=blue        % cor para links URL
+}
+\makeatother
+
+% Ajusta os links e cores dependendo se o PDF é para divulgação web ou se é
+% para impressão final em preto-e-branco. Obs.:
+%   colorlinks:   false = links em caixas; true = links coloridos
+%   hidelinks:    esconde os links
+\ifthenelse{\equal{\imprimirversaoweb}{S}}{% Versão para web
+   \hypersetup{colorlinks=true}%
+}{% Versão para impressão
+   \hypersetup{hidelinks, colorlinks=false}%
+}
+

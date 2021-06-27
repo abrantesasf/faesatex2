@@ -1,0 +1,89 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ficha.tex
+%
+% Modelo de arquivo para uso com a classe faesaTeX2, para a formatação de
+% trabalhos acadêmicos na FAESA Centro Universitário (https://www.faesa.br).
+%
+% Para maiores informações, visite:
+%    https://github.com/abrantesasf/faesatex2
+%
+% Este arquivo cria ficha catalográfica de sua monografia, automaticamente, de
+% acordo com os dados que foram fornecidos pelo autor no arquivo da monografia,
+% no formato padronizado seguido pela maioria das universidades e faculdades,
+% por exemplo:
+%    https://fichacatalografica.ufam.edu.br/ficha/create
+%    https://www.rsirius.uerj.br/novo/index.php/ficha2
+%    https://sistemas.ufmt.br/mfc/
+%    http://fichacatalografica.ufc.br/
+%    https://portal.biblioteca.ufabc.edu.br/servicos/ficha-catalografica
+%    https://portal.biblioteca.ufabc.edu.br/ficha_catalografica/
+%    https://www2.ufjf.br/biblioteca/ficha-catalografica/
+%    http://biblioteca.unip.br/FichaCatalografica/BIBFichaCatalograficaWEB.aspx
+%    https://sabi.ufrgs.br/servicos/publicoBC/ficha.php
+%    https://www.tabelacutter.com/
+%    https://cuttersonline.com/app/pages/home
+%
+% Você deve utilizar este modelo até a aprovação final do trabalho e, após isso,
+% se a biblioteca da FAESA lhe fornecer uma ficha catalográfica definitiva,
+% deve substituir o conteúdo deste arquivo por uma imagem da ficha final. Siga
+% as instruções abaixo.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Ficha catalográfica provisória:
+% É gerada automaticamente, não ALTERE NADA AQUI!
+\begin{fichacatalografica}
+\vspace*{\fill}
+\begin{center}
+Dados Internacionais de Catalogação na Publicação (CIP)
+\vspace{0.05cm}
+
+\fbox{
+\begin{minipage}[c][8cm]{1.5cm}
+\vspace{0.4cm}
+\imprimircutter
+\vspace*{\fill}
+\end{minipage}
+\begin{minipage}[c][8cm]{12.5cm}
+\vspace{0.4cm}
+\imprimirautorcutter
+
+\hspace{0.5cm} \imprimirtitulo\  / \imprimirautor. --- \imprimirdata.
+
+\vspace{0.4cm}
+\hspace{0.5cm} \thelastpage\ págs.\ :\ il.\ color.\ ;\ 30 cm.
+
+\vspace{0.4cm}
+\hspace{0.5cm} \imprimirorientadorRotulo~\imprimirorientador
+
+\ifthenelse{\isundefined{\coorientador}}{}{
+\hspace{0.5cm} \imprimircoorientadorRotulo~\imprimircoorientador
+}
+
+\hspace{0.5cm} \imprimirtipotrabalho\ (\imprimircursofaesa) ---
+\imprimirnomefaesa, \imprimirunidadefaesa, \imprimirlocal, \imprimirdata.
+
+\vspace{0.4cm}
+\hspace{0.5cm} \imprimirassunto
+\vspace*{\fill}
+\end{minipage}
+}
+\vspace{-0.1cm}
+
+Gerado automaticamente com os dados fornecidos pelo(a) autor(a).
+\end{center}
+\end{fichacatalografica}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Ficha catalográfica provisória:
+% Depois que seu trabalho estiver aprovado de forma definitiva, se a biblioteca
+% da FAESA lhe forneceu uma ficha catalográfica oficial e definitiva, salve
+% essa filha em formato PDF. Depois, comente ou apague o código acima, da
+% ficha catalográfica provisória, e retire o comentário do código abaixo, para
+% incluir o PDF com a imagem da ficha catalográfica oficial definitiva.
+
+%\begin{fichacatalografica}
+%\includepdf{fig_ficha_catalografica.pdf}
+%\end{fichacatalografica}

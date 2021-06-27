@@ -1,0 +1,361 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Modelo para trabalhos monográficos (TCC, Dissertações, Teses) da FAESA
+%%% Centro Universitário (https://www.faesa.br), utilizando a classe faesaTeX2.
+%%%
+%%% Para maiores informações, visite:
+%%% https://github.com/abrantesasf/faesatex2
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Classe do documento
+%%% As opções padronizadas abaixo são otimizadas para a apresentação monográfica
+%%% na FAESA: só altere se souber exatamente o que está fazendo.
+\documentclass[
+	% -- opções da classe memoir (utilizada pela abnTeX2) --
+	12pt,				  % tamanho da fonte
+	openright,			  % capítulos começam em página ímpar
+	twoside,			  % impressão nos dois lados do papel
+	a4paper,			  % tamanho do papel
+	% -- opções da classe abnTeX2 (utilizada pela faesaTeX2) --
+	%chapter=TITLE,		  % capítulos em letras maiúsculas
+	%section=TITLE,		  % seções em letras maiúsculas
+	%subsection=TITLE,	  % subseções em letras maiúsculas
+	%subsubsection=TITLE, % subsubseções em letras maiúsculas
+	% -- opções do pacote babel --
+	english,			% idioma adicional para hifenização
+	french,				% idioma adicional para hifenização
+	spanish,			% idioma adicional para hifenização
+	brazil				% o último idioma é o principal do documento
+	]{faesatex2}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Dados da monografia
+%%% Preencha conforme as instruções a seguir.
+
+% Informe o título da monografia (lembre-se: um título objetivo e curto é melhor
+% do que um título longo).
+\titulo{Este é o título do TCC}
+
+% Informe o(s) autor(es). Se houver mais de 1 autor, separar os autores com o
+% comando " \and " (sem as aspas).
+\autor{Primeiro Autor \and Segundo Autor}
+
+% Informe o local no formato Cidade/UF (geralmente não é necessário alterar).
+\local{Vitória/ES}
+
+% Informe o ano.
+\data{2021}
+
+% Informe o nome do orientador (por extenso). Se for mulher, ajuste a
+% qualificação que está entre colchetes.
+\orientador[Orientador:]{Nome do Orientador}
+
+% Informe o nome do coorientador (por extenso). Se for mulher, ajuste a
+% qualificação que está entre colchetes. Se não houver coorientador, comentar
+% a linha.
+\coorientador[Coorientador:]{Nome do Coorientador}
+
+% Informe a unidade ou o departamento de seu curso na FAESA.
+\unidadefaesa{Unidade de Engenharia e Computação}
+
+% Informe qual o seu curso na FAESA.
+\cursofaesa{Graduação em Ciência da Computação}
+
+% Informe que tipo de trabalho monográfico é este, com uma das seguintes opções:
+%    Trabalho de Conclusão de Curso
+%    Dissertação de Mestrado
+%    Tese de Doutorado
+\tipotrabalho{Trabalho de Conclusão de Curso}
+
+% Nome oficial da FAESA (evite alterar).
+\nomefaesa{FAESA Centro Universitário}
+
+% Informe o preâmbulo da monografia (geralmente o tipo de trabalho, o objetivo,
+% o nome da instituição e a área de concentração). Consulte seu orientador para
+% instruções específicas se necessário, ou altere o modelo abaixo conforme
+% suas necessidades (não retire os comandos "\imprimirunidadefaesa" e
+% "\imprimirnomefaesa").
+\preambulo{Trabalho Preliminar de Conclusão de Curso (TCC-1) apresentado à
+\imprimirunidadefaesa\ da \imprimirnomefaesa, como requisito parcial para a
+obtenção do grau de bacharel em Ciência da Computação.}
+
+% Palavras-chave da monografia, em português. Essas palavras-chave serão
+% incluídas automaticamente no resumo em português, e nas propriedades do
+% arquivo PDF final gerado.
+\palavraschave{palavra1, palavra2, palavra3, palavra4, palavra5}
+
+% Keywords (palavras-chave) da monografia, em inglês. Essas keywords serão
+% incluídas automaticamente no abstract em inglês, e nas propriedades do arquivo
+% PDF final gerado.
+\keywords{word1, word2, word3, word4, word5}
+
+% Autor a ser utilizado na geração do código de Cutter da ficha catalográfica,
+% no formato "Sobrenome, Nome". Atenção: se a monografia tiver dois autores,
+% geralmente escreve-se aqui o nome do autor que está em primeiro lugar em
+% ordem alfabética. Por exemplo: se os autores são "Fulano de Tal" e "Beltrano
+% de Tal", escreveríamos aqui "Tal, Beltrano de".
+\autorcutter{Sobrenome, Nome}
+
+% Código de cutter. Gere o código com alguma ferramente online (por exemplo:
+% https://www.tabelacutter.com ou https://cuttersonline.com) e escreve o código
+% aqui. Atenção: como nome do autor use "Sobrenome, Nome" e como complemento ou
+% marca, use a primeira letra do título da monografia, em minúscula. Se você
+% tiver dificuldade, peça auxílio à bibliotecária da FAESA.
+\cutter{X999x}
+
+% Assuntos para a ficha catalográfica. É obrigatório incluir pelo menos 1
+% assunto (até o total de 5). Colocar ponto após o número do assunto e após o
+% próprio assunto. Comentar os que, por acaso, não forem utilizados. Se você
+% tiver dificuldade, peça auxílio à bibliotecária da FAESA.
+\assunto{%
+1. Assunto um.
+2. Assunto dois.
+3. Assunto três.
+4. Assunto quatro.
+5. Assunto cinco.
+I. Sobrenome, Nome.           % Sobrenome e nome: 2º autor OU orientador
+II. Sobrenome, Nome.          % Sobrenome e nome: orientador OU coorientador
+III. \imprimirnomefaesa.      % Sobrenome e nome do coorientador OU nome FAESA
+IV. Título.                   % Nome FAESA OU a palavra "Título"
+%V. Título.                   % A palavra "Título", SE não está na linha acima
+}
+
+% NÃO ALTERE AQUI:
+\input{utils/faesa}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Preâmbulo com a inclusão de todos os packages necessários
+%%% Não altere!
+\input{utils/preambulo.tex}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Configurações para as propriedades do PDF
+%%% Altere conforme as instruções a seguir:
+
+% Esta é uma versão para web? Responder apenas com "S" ou "N"!
+% Obs.: se for uma versão web, o PDF final gerado terá links visíveis e com
+% cores em diversos elementos (links azuis, indicação de rodapé em vermelho,
+% aquivos em magenta etc.). Se não for uma versão para web será considerada uma
+% versão para impressão e o texto terá links ocultos sem cores extras, e será
+% impresso totalmente em preto-e-branco (o que é apropriado para a máxima
+% qualidade de impressão).
+\versaoweb{S}
+
+% NÃO ALTERE AQUI:
+\input{utils/pdfconfig}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Compila o indice, se houver.
+%%% Não altere!
+\makeindex
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Inicia o documento
+\begin{document}
+
+% Seleciona linguagem principal do documento (brazil, english).
+\selectlanguage{brazil}
+
+% Retira espaço extra obsoleto entre as frases (opcional).
+%\frenchspacing
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Elementos pré-textuais
+\pretextual
+
+% Capa: OBRIGATÓRIA.
+% Não altere os comandos a seguir:
+\input{pretextuais/capa}
+
+% Folha de rosto: OBRIGATÓRIA.
+% Não altere o comando a seguir:
+\input{pretextuais/rosto}
+
+% Ficha bibliografica: OBRIGATÓRIA.
+% Não altere o comando a seguir:
+\input{pretextuais/ficha}
+
+% Errata: OPCIONAL.
+% Faça as modificações necessárias no arquivo "errata.tex", que está no
+% diretório "pretextuais". Para incluir a errata, retire o comentário do comando
+% abaixo. Se não houver errata, mantenha comentado.
+%\input{pretextuais/errata}
+
+% Folha de aprovação: OBRIGATÓRIA.
+% Faça as modificações necessárias no arquivo "aprovacao.tex", que está no
+% diretório "pretextuais". Não altere o comando abaixo:
+\input{pretextuais/aprovacao}
+
+% Dedicatória: OPCIONAL.
+% Faça as modificações necessárias no arquivo "dedicatoria.tex", que está no
+% diretório "pretextuais". Para incluir a dedicatória, retire o comentário do
+% comando abaixo. Se não houver dedicatória, mantenha comentado.
+%\input{pretextuais/dedicatoria}
+
+% Agradecimentos: OPCIONAL.
+% Faça as modificações necessárias no arquivo "agradecimentos.tex", que está no
+% diretório "pretextuais". Para incluir os agradecimentos, retire o comentário
+% do comando abaixo. Se não houver agradecimentos, mantenha comentado.
+%\input{pretextuais/agradecimentos}
+
+% Epígrafe: OPCIONAL.
+% Faça as modificações necessárias no arquivo "epigrafe.tex", que está no
+% diretório "pretextuais". Para incluir a epígrafe, retire o comentário do
+% comando abaixo. Se não houver epígrafe, mantenha comentado.
+%\input{pretextuais/epigrafe}
+
+% Resumo em português: OBRIGATÓRIO.
+% Escreva o resumo no arquivo "resumo.tex", que está no diretório "pretextuais".
+% Não altere o comando abaixo.
+\input{pretextuais/resumo}
+
+% Resumo em inglês: OBRIGATÓRIO.
+% Escreva o resumo no arquivo "abstract.tex", que está no diretório
+% "pretextuais". Não altere o comando abaixo.
+\input{pretextuais/abstract}
+
+% Lista de ilustrações: OPCIONAL (geralmente é incluída).
+% É gerada automaticamente. Para incluir, retire o comentário do comando abaixo.
+\input{pretextuais/ilustracoes}
+
+% Lista de quadros: OPCIONAL (geralmente NÃO é incluída).
+% Para incluir, retire o comentário do comando abaixo. Tem certeza que você
+% irá incluir uma lista de quadros? É realmente necessário? Tem certeza?
+%\input{pretextuais/quadros}
+
+% Lista de tabelas: OPCIONAL (geralmente é incluída).
+% É gerada automaticamente. Para incluir, retire o comentário do comando abaixo.
+\input{pretextuais/tabelas}
+
+% Lista de abreviaturas e siglas: OPCIONAL (geralmente é incluída).
+% Faça as alterações necessárias no arquivo "abrev.tex", que está no diretório
+% "pretextuais". Para incluir, retire o comentário do comando abaixo. Se não
+% houver a lista de abreviaturas e siglas, mantenha o comando comentado.
+\input{pretextuais/abrev}
+
+% Lista de símbolos: OPCIONAL (geralmente NÃO é incluída).
+% Faça as alterações necessárias no arquivo "simb.tex", que está no diretório
+% "pretextuais". Para incluir, retire o comentário do comando abaixo. Se não
+% houver a lista de símbolos, mantenha o comando comentado.
+%\input{pretextuais/simb}
+
+% Sumário: OBRIGATÓRIO.
+% É gerado automaticamente. Não altere o comando a seguir:
+\input{pretextuais/sumario}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Elementos textuais
+\textual
+
+% OK, aqui vai TODO o conteúdo de seu trabalho! Escreva cada capítulo de sua
+% monografia em um arquivo TeX separado, para facilitar a organização, e salve
+% esses arquivos no diretório "textuais". O nome do arquivo deve incluir a
+% extensão ".tex", por exemplo: "introducao.tex". Depois que os capítulos
+% estiverem prontos, basta incluir os capítulos aqui com um comando "input"
+% do seguinte modo:
+%                      /input{textuais/arquivo}
+%
+% Note que, no comando acima, para incluir um capítulo gravado no arquivo
+% "arquito.tex", não incluímos a extensão. Na FAESA os trabalhos monográficos
+% geralmente seguem a seguinte estrutura:
+%
+% Se projeto de pesquisa:
+%    Introdução (problema, hipótese, objetivos e justificativa)
+%    Referencial teórico
+%    Metodologia
+%    Cronograma
+%
+% Se trabalho de conclusão de curso:
+%    Introdução (problema, hipótese, objetivos e justificativa)
+%    Referencial teórico
+%    Metodologia
+%    Resultados
+%    Conclusões
+%
+% A estrutura acima é uma sugestão geral e não precisa ser seguida a ferro e
+% fogo. Converse com seu orientador sobre a melhor forma de dividir o conteúdo
+% de seu trabalho, e inclua os arquivos apropriados a seguir (na ordem em que
+% devem aparecer). Obviamente a linha não deve estar comentada, não é?
+
+%\input{textuais/introducao}
+
+%\input{textuais/referencial}
+
+%\input{textuais/metodologia}
+
+%\input{textuais/resultados}
+
+%\input{textuais/conclusoes}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Elementos pós-textuais
+\postextual
+
+% Referências bibliográficas: OBRIGATÓRIO.
+% Indique, abaixo, onde está o banco de dados (geralmente um arquivo) que
+% armazena todas as referências bibliográficas que você citou neste trabalho.
+% Atenção: o arquivo deve estar no formato BibTeX. Para saber mais sobre o
+% BibTeX, consulte:
+%    http://www.bibtex.org
+%    https://www.bibtex.com
+% Se você não tem um software para gerenciamento de referências bibliográficas
+% compatível com o BibTeX, sugerimos que você use o JabRef, que é um sistema
+% de gerenciamento bibligráfico open-source com várias funcionalidades. Saiba
+% mais (e faça o download) aqui:
+%    https://www.jabref.org
+% Onde está o arquivo com as referências bibliográficas? Você deve apontar um
+% arquivo no formato BibTeX aqui (o arquivo refsdb.bib é um arquivo de exemplo
+% com 2 livros cadastrados):
+\bibliography{referencias/refsdb}
+
+% Glossário: OPCIONAL (geralmente NÃO é incluído).
+% Se quiser incluir um glossário, consulte a documentação do abnTeX2 para
+% maiores informações!
+%\glossary
+
+% Apêndices: OPCIONAIS (você deve incluir ou não dependendo se seu trabalho tem
+% ou não apêndices).
+% Atenção: apêndices são diferentes de anexos! Apêndices são documentos que VOCÊ
+% produziu e precisa incluir em seu trabalho para ilustrar ou documentar algo.
+% Se sua monografia incluir apêndices, descomente o bloco de código abaixo e
+% inclua, através de comandos "input" (conforme o exemplo) os arquivos que farão
+% parte dos apêndices, na ordem que você deseja.
+%\begin{apendicesenv}
+%\partapendices
+%\input{postextuais/apend1}
+%\end{apendicesenv}
+
+% Anexos: OPCIONAIS (você deve incluir os não dependendo se seu trabalho tem
+% ou não anexos).
+% Atenção: anexos são diferentes de apêndices. Anexos são documentos de OUTROS
+% autores que você precisa incluir para ilustrar ou documentar algo.
+% Se sua monografia incluir anexos, descomente o bloco de código abaixo e
+% inclua, através de comandos "input" (conforme o exemplo) os arquivos que farão
+% parte dos anexos, na ordem que você deseja.
+%\begin{anexosenv}
+%\partanexos
+%\input{postextuais/anex1}
+%\end{anexosenv}
+
+% Índice remissivo: OPCIONAL (geralmente NÃO é incluído).
+% Se quiser incluir um índice remissivo, consulte a documentação do abnTeX2 para
+% maiores informações!
+%\phantompart
+%\printindex
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Encerra o documento
+\end{document}

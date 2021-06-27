@@ -1,0 +1,78 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% aprovacao.tex
+%
+% Modelo de arquivo para uso com a classe faesaTeX2, para a formatação de
+% trabalhos acadêmicos na FAESA Centro Universitário (https://www.faesa.br).
+%
+% Para maiores informações, visite:
+%    https://github.com/abrantesasf/faesatex2
+%
+% Esta é a folha de aprovação (ou reprovação!, se você fizer um trabalho ruim)
+% de sua monografia. Você deve utilizar este modelo até a aprovação final do
+% trabalho e, após isso, deve substituir o conteúdo deste arquivo por uma
+% imagem da página assinada pela banca. Siga as instruções abaixo.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Folha de aprovação provisória:
+% Esta folha de aprovação provisória irá imprimir, automaticamente, o nome
+% do orientador, mas NÃO IMPRIMIRÁ automaticamente o nome do coorientador ou os
+% nomes dos membros da banca. Para isso, você deve acrescentar o nome do
+% coorientador e o nome dos membros da banca nos locais assinalados abaixo.
+% NÃO ALTERE mais nada, somente onde está assinalado!
+
+\begin{folhadeaprovacao}
+
+  \begin{center}
+    {\ABNTEXchapterfont\large\imprimirautor}
+
+    \vspace*{\fill}\vspace*{\fill}
+    \begin{center}
+      \ABNTEXchapterfont\bfseries\Large\imprimirtitulo
+    \end{center}
+    \vspace*{\fill}
+    
+    \hspace{.45\textwidth}
+    \begin{minipage}{.5\textwidth}
+        \imprimirpreambulo
+    \end{minipage}%
+    \vspace*{\fill}
+   \end{center}
+        
+   Trabalho \{a|re\}provado. \imprimirlocal, xx de xxx de 2021.
+
+   \assinatura{\textbf{\imprimirorientador} \\ Orientador}
+   % ALTERE AQUI se seu trabalho tiver coorientador:
+   %\assinatura{\textbf{NOME DO COORIENTADOR} \\ Coorientador}
+   % ALTERE AQUI e coloque o nome por extenso dos professores da banca:
+   \assinatura{\textbf{NOME DO PROFESSOR} \\ Membro da banca}
+   \assinatura{\textbf{NOME DO PROFESSOR} \\ Membro da banca}
+   % ALTERE AQUI se seu trabalho tiver mais membros na banca:
+   %\assinatura{\textbf{NOME DO PROFESSOR} \\ Membro da banca}
+   %\assinatura{\textbf{NOME DO PROFESSOR} \\ Membro da banca}
+      
+   \begin{center}
+    \vspace*{0.5cm}
+    {\large\imprimirlocal}
+    \par
+    {\large\imprimirdata}
+    \vspace*{1cm}
+  \end{center}
+  
+\end{folhadeaprovacao}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Folha de aprovação definitiva:
+% Depois que seu trabalho estiver aprovado de forma definitiva, peça para
+% que seu orientador, coorientador e demais membros da banca assinem a folha
+% de aprovação. Escaneia a folha de aprovação assinada, com boa resolução, e
+% salve a imagem em formato PDF. Depois, comente ou apague o código acima, da
+% folha de aprovação provisória, e retire o comentário do código abaixo, para
+% incluir o PDF com a imagem escaneada da folha de aprovação assinada.
+
+%\begin{folhadeaprovacao}
+%\includepdf{folhadeaprovacao_final.pdf}
+% \end{folhadeaprovacao}
+

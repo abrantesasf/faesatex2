@@ -1,0 +1,31 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% layout.tex
+%
+% Arquivo de configuração de packages para uso com a classe faesaTeX2, para a
+% formatação de trabalhos acadêmicos na FAESA Centro Universitário
+% (https://www.faesa.br).
+%
+% Para maiores informações, visite:
+%    https://github.com/abrantesasf/faesatex2
+%
+% NÃO ALTERE NADA AQUI!
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Posiciona figuras e tabelas no topo da página quando adicionadas sozinhas
+% em um página em branco. Ver https://github.com/abntex/abntex2/issues/170
+\makeatletter
+\setlength{\@fptop}{5pt}   % Set distance from top of page to first float
+\makeatother
+
+% O tamanho do parágrafo é dado por:
+\setlength{\parindent}{1.3cm}
+
+% Controle do espaçamento entre um parágrafo e outro:
+\setlength{\parskip}{0.2cm}  % tente também \onelineskip
+
+% Para melhorias de justificação
+\usepackage{microtype}
+
+% Para contar págians
+\usepackage{lastpage}
+

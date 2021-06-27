@@ -1,0 +1,30 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% quadros.tex
+%
+% Arquivo de configuração de packages para uso com a classe faesaTeX2, para a
+% formatação de trabalhos acadêmicos na FAESA Centro Universitário
+% (https://www.faesa.br).
+%
+% Para maiores informações, visite:
+%    https://github.com/abrantesasf/faesatex2
+%
+% NÃO ALTERE NADA AQUI!
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Possibilita criação de quadros
+% Ver https://github.com/abntex/abntex2/issues/176
+
+\newcommand{\quadroname}{Quadro}
+\newcommand{\listofquadrosname}{Lista de quadros}
+
+\newfloat[chapter]{quadro}{loq}{\quadroname}
+\newlistof{listofquadros}{loq}{\listofquadrosname}
+\newlistentry{quadro}{loq}{0}
+
+\setfloatadjustment{quadro}{\centering}
+\counterwithout{quadro}{chapter}
+\renewcommand{\cftquadroname}{\quadroname\space} 
+\renewcommand*{\cftquadroaftersnum}{\hfill--\hfill}
+
+\setfloatlocations{quadro}{hbtp}
+

@@ -1,0 +1,50 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% fontes.tex
+%
+% Arquivo de configuração de packages para uso com a classe faesaTeX2, para a
+% formatação de trabalhos acadêmicos na FAESA Centro Universitário
+% (https://www.faesa.br).
+%
+% Para maiores informações, visite:
+%    https://github.com/abrantesasf/faesatex2
+%
+% Você deve informar abaixo quais são as fontes que você quer usar na sua
+% monografia, se utilizar o XeLaTeX para a compilação. Se usar o pdfLaTeX a
+% monografia será impressa com as fontes padronizadas do TeX.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Configurações de encodings e fontes:
+\ifxetex
+   % Se usar XeLaTeX, usa fontes específicas:
+   \usepackage[tuenc,no-math]{fontspec}
+   \setmainfont{equity-text-a-regular.otf}[
+      Path           = /home/abrantesasf/.local/share/fonts/ ,
+      BoldFont       = equity-text-a-bold.otf                ,
+      ItalicFont     = equity-text-a-italic.otf              ,
+      BoldItalicFont = equity-text-a-bold-italic.otf]
+   \setsansfont{equity-text-b-regular.otf}[
+      Path           = /home/abrantesasf/.local/share/fonts/ ,
+      BoldFont       = equity-text-b-bold.otf                ,
+      ItalicFont     = equity-text-b-italic.otf              ,
+      BoldItalicFont = equity-text-b-bold-italic.otf]
+   \setmonofont{triplicate-t4-regular.otf}[
+      Path           = /home/abrantesasf/.local/share/fonts/ ,
+      BoldFont       = triplicate-t4-bold.otf                ,
+      ItalicFont     = triplicate-t4-italic.otf              ,
+      BoldItalicFont = triplicate-t4-bold-italic.otf]
+   \usepackage{fontawesome5}
+\else
+   % Se não for XeLaTeX, vai com as normais mesmo:
+   \usepackage[T1]{fontenc}
+   \usepackage[utf8]{inputenc}
+   \usepackage{lmodern}
+   % Altera a fonte padrão do documento (nem todas funcionam em modo math):
+   %   phv = Helvetica
+   %   ptm = Times
+   %   ppl = Palatino
+   %   pbk = bookman
+   %   pag = AdobeAvantGarde
+   %   pnc = Adobe NewCenturySchoolBook
+   %\renewcommand{\familydefault}{ppl}
+\fi
+
